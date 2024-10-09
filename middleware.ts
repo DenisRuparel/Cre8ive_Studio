@@ -22,7 +22,7 @@ export default clerkMiddleware((auth, req: NextRequest) => {
   const isPublic = isPublicRoute(req);
 
   // Log the request path and whether it's considered public
-  console.log(`Request URL: ${req.url}, Is Public: ${isPublic}`);
+  // console.log(`Request URL: ${req.url}, Is Public: ${isPublic}`);
 
   if (!isPublic) {
     auth().protect();
